@@ -1,9 +1,0 @@
-\beamer@endinputifotherversion {3.10pt}
-\select@language {norsk}
-\beamer@sectionintoc {1}{Hva er \textlatin {\LaTeX }?}{3}{0}{1}
-\beamer@sectionintoc {2}{Hvordan bruke \textlatin {\LaTeX }?}{7}{0}{2}
-\beamer@sectionintoc {3}{Syntaks}{8}{0}{3}
-\beamer@sectionintoc {4}{Tekst}{14}{0}{4}
-\beamer@sectionintoc {5}{Verkt\IeC {\o }y}{18}{0}{5}
-\beamer@sectionintoc {6}{Matematikk}{25}{0}{6}
-\beamer@sectionintoc {7}{Veien videre}{28}{0}{7}
