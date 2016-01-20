@@ -16,7 +16,7 @@
 \usepackage{listings}
 
 % Tittel
-\title{Introduksjon til \LaTeX}
+\title{Introduksjon til \LaTeX{}}
 \author{Veronika Heimsbakk\\veronika.heimsbakk@acando.no}
 \date{}
 
@@ -38,7 +38,7 @@
 	\item
 	Utstudert fra Institutt for informatikk våren 2015.
 	\item
-	Forkjærlighet for \LaTeX, Ti\textit{k}Z, farger og fonter.
+	Forkjærlighet for \LaTeX{}, Ti\textit{k}Z, farger og fonter.
 	\item
 	Tidligere ansatt i Sonen $\heartsuit$.
 	\item
@@ -47,7 +47,7 @@
 \end{frame}
 
 % Hva er LaTeX?
-\section{Hva er \LaTeX?}
+\section{Hva er \LaTeX{}?}
 \subsection{}
 \begin{frame}\frametitle{}
 
@@ -113,7 +113,7 @@
 \end{frame}
 
 % Hvordan bruke LaTeX?
-\section{Hvordan bruke \LaTeX?}
+\section{Hvordan bruke \LaTeX{}?}
 \subsection{}
 \begin{frame}\frametitle{Innstallasjon}
 
@@ -258,10 +258,10 @@ Dette er en underparagraf i seksjon 1 sin underunderseksjon.
 
 \begin{verbatim}
 \textbf{Fet}
-{\bf Fet}
+\bfseries{Fet}
 
 \textit{Kursiv}
-{\it Kursiv}
+\itshape{Kursiv}
 \end{verbatim}
 
 \end{frame}
@@ -319,7 +319,7 @@ Dette er en underparagraf i seksjon 1 sin underunderseksjon.
 
 \begin{itemize}
 	\item
-	Det fint \textbf{mange} skrifttyper til \LaTeX. Sjekk ut \url{http://www.tug.dk/FontCatalogue/}
+	Det fint \textbf{mange} skrifttyper til \LaTeX{}. Sjekk ut \url{http://www.tug.dk/FontCatalogue/}
 \end{itemize}
 
 \end{frame}
@@ -454,14 +454,14 @@ Eksempeltekst med fotnote.\footnote{Dette er en fotnote.}
 	\item[]
 	\url{http://tug.org/}
 	\item[]
-	\href{http://tug.org/}{\TeX Users Group web site}
+	\href{http://tug.org/}{\TeX{} Users Group web site}
 	\item[]
 	\href{mailto:veronahe@ifi.uio.no}{veronahe@ifi.uio.no}
 \end{description}
 
 \begin{verbatim}
 \url{http://tug.org/}
-\href{http://tug.org/}{\TeX Users Group web site}
+\href{http://tug.org/}{\TeX{} Users Group web site}
 \href{mailto:veronahe@ifi.uio.no}{veronahe@ifi.uio.no}
 \end{verbatim}
 
@@ -470,7 +470,7 @@ Eksempeltekst med fotnote.\footnote{Dette er en fotnote.}
 % Matematikk
 \section{Matematikk}
 \subsection{}
-\begin{frame}[fragile]\frametitle{Miljø}
+\begin{frame}[fragile]\frametitle{Miljø, fra \TeX{}}
 
 \begin{verbatim}
 $ ... $   % Formel på linje
@@ -481,6 +481,38 @@ Formel på linje $\forall x \in X, \quad \exists y \leq \epsilon$
 
 Fremhevet ligning $$\forall x \in X, \quad \exists y \leq \epsilon$$ 
 
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Miljø, nytt i \LaTeX{}}
+
+\begin{verbatim}
+\( ... \)  % Formel på linje
+\[ ... \]  % Fremhevet ligning
+\end{verbatim}
+
+Formel på linje \(\forall x \in X, \quad \exists y \leq \epsilon\)
+
+Fremhevet ligning \[\forall x \in X, \quad \exists y \leq \epsilon\]
+
+\begin{itemize}
+	\item
+	Alternative måter å skrive ligninger på er ved å bruke
+	\begin{itemize}
+		\item
+		\texttt{\textbackslash begin\{equation\}}
+		\item
+		\texttt{\textbackslash begin\{align\}}
+	\end{itemize}
+\end{itemize}
+
+\begin{align}
+\forall x \in X, \quad \exists y \leq \epsilon
+\end{align}
+
+\begin{itemize}
+	\item
+	\texttt{align} gir nummererte ligninger.
+\end{itemize}
 \end{frame}
 
 % Symboler
@@ -507,9 +539,9 @@ $\lambda$&\texttt{\textbackslash lambda}\\
 
 \begin{itemize}
 	\item
-	\href{http://texdoc.net/texmf-dist/doc/latex/comprehensive/symbols-a4.pdf}{The Comprehensive \LaTeX Symbol List}
+	\href{http://texdoc.net/texmf-dist/doc/latex/comprehensive/symbols-a4.pdf}{The Comprehensive \LaTeX{} Symbol List}
 	\item
-	\href{https://en.wikibooks.org/wiki/LaTeX/Mathematics}{\LaTeX Wiki Mathematics}
+	\href{https://en.wikibooks.org/wiki/LaTeX/Mathematics}{\LaTeX{} Wiki Mathematics}
 \end{itemize}
 
 \end{frame}
