@@ -13,6 +13,7 @@
 \usepackage{soul}
 \usepackage{amsmath}
 \usepackage{tikz}
+\usepackage{listings}
 
 % Tittel
 \title{Introduksjon til \LaTeX}
@@ -35,7 +36,7 @@
 
 \begin{itemize}
 	\item
-	Gikk ut fra Institutt for informatikk våren 2015.
+	Utstudert fra Institutt for informatikk våren 2015.
 	\item
 	Forkjærlighet for \LaTeX, Ti\textit{k}Z, farger og fonter.
 	\item
@@ -153,7 +154,7 @@
 
 \begin{itemize}
 	\item \textbf{Options}: font size, paper size, twoside/oneside, landscape etc.
-	\item \textbf{Class}: \texttt{article}, \texttt{report}, \texttt{minimal}, \texttt{beamer} etc.
+	\item \textbf{Class}: \texttt{book}, \texttt{article}, \texttt{report}, \texttt{minimal}, \texttt{beamer} etc.
 \end{itemize}
 \end{frame}
 
@@ -246,7 +247,7 @@ Dette er en underparagraf i seksjon 1 sin underunderseksjon.
 \begin{tabular}{cccc}
 \texttt{\textbackslash textbf}&\texttt{\textbackslash textit}&\texttt{\textbackslash texttt}&\texttt{\textbackslash underline}\\
 \\
-\textbf{Fet}&\textit{Kursiv}&\texttt{Typeface}&\underline{Underline}\\
+\textbf{Fet}&\textit{Kursiv}&\texttt{Typeface}&\underline{Understrek}\\
 \end{tabular}
 \end{center}
 
@@ -472,13 +473,13 @@ Eksempeltekst med fotnote.\footnote{Dette er en fotnote.}
 \begin{frame}[fragile]\frametitle{Miljø}
 
 \begin{verbatim}
-$ ... $   % Inline formulas
-$$ ... $$ % Displayed equations
+$ ... $   % Formel på linje
+$$ ... $$ % Fremhevet ligning
 \end{verbatim}
 
-Inline formula $\forall x \in X, \quad \exists y \leq \epsilon$
+Formel på linje $\forall x \in X, \quad \exists y \leq \epsilon$
 
-Displayed equations $$\forall x \in X, \quad \exists y \leq \epsilon$$ 
+Fremhevet ligning $$\forall x \in X, \quad \exists y \leq \epsilon$$ 
 
 \end{frame}
 
@@ -506,9 +507,9 @@ $\lambda$&\texttt{\textbackslash lambda}\\
 
 \begin{itemize}
 	\item
-	\url{http://texdoc.net/texmf-dist/doc/latex/comprehensive/symbols-a4.pdf}
+	\href{http://texdoc.net/texmf-dist/doc/latex/comprehensive/symbols-a4.pdf}{The Comprehensive \LaTeX Symbol List}
 	\item
-	\url{https://en.wikibooks.org/wiki/LaTeX/Mathematics}
+	\href{https://en.wikibooks.org/wiki/LaTeX/Mathematics}{\LaTeX Wiki Mathematics}
 \end{itemize}
 
 \end{frame}
@@ -516,7 +517,7 @@ $\lambda$&\texttt{\textbackslash lambda}\\
 % Sannhetstabeller
 \begin{frame}[fragile]\frametitle{Sannhetstabeller}
 
-\LaTeX er det \textbf{perfekte} verktøy for dere som tar INF1080!
+\LaTeX er det \textbf{perfekte} verktøy for dere som tar INF2080\footnote{Samt andre fag med tekstlige innleveringer.}!
 
 \begin{center}
 \begin{tabular}{cc|c}
@@ -530,6 +531,74 @@ A&B&A $\land$ B\\
 \end{center}
 
 \end{frame}
+
+% Kode
+\section{Kode}
+\subsection{}
+
+% Innstillinger for lstlistings
+\lstset{
+	language=Java,
+	keywordstyle=\color{blue},
+	stringstyle=\color{red},
+	numbers=left,
+	numberstyle=\tiny\color{lightgray},
+	tabsize=2
+}
+
+\begin{frame}[fragile]
+\frametitle{\texttt{lstlistings}}
+
+\begin{lstlisting}
+public class Kode {
+	public static void main(String[] args) {
+		System.out.println("Hei, alle sammen!");
+	}
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Innstillinger for \texttt{lstlistings}}
+\begin{verbatim}
+\lstset{
+  language=Java,
+  keywordstyle=\color{blue},
+  stringstyle=\color{red},
+  numbers=left,
+  numberstyle=\tiny\color{lightgray},
+  tabsize=2
+}
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Bruke \texttt{lstlistings}}
+\begin{verbatim}
+\begin{lstlisting}
+  public class Kode {
+    public static void main(String[] args) {
+      System.out.println("Hei, alle sammen!");
+    }
+  }
+\end{lstlisting}
+\end{verbatim}
+\begin{itemize}
+\item
+Kan laste inn fil ved å bruke \texttt{\textbackslash lstinputlisting\{source\_filename.py\}}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Språk som støttes av \texttt{lstlistings}}
+ABAP, ACSL, Ada, Algol, Ant, Assembler, Awk, bash, Basic, C\#, C++, C, Caml, Clean, Cobol, Comal, csh, Delphi, Eiffel, Elan, erlang, Euphoria, Fortran, GCL, Gnuplot, Haskell, HTML, IDL, inform, Java, JVMIS, ksh, Lisp, Logo, Lua, make, Mathemathica, Matlab, Mercury, MetaPost, Miranda, Mizar, ML, Modelica, Modula-2, MuPAD, NASTRAN, Oberon-2, Objective C, OCL, Octave, Oz, Pascal, Perl, PHP, PL/I, Plasm, POV, Prolog, Promela, Python, R, Reduce, Rexx, RSL, Ruby, S, SAS, Scilab, sh, SHELXL, Simula, SQL, tcl, \TeX, VBScript, Verilog, VHDL, VRML, XML, XSLT.
+
+\begin{itemize}
+\item
+Du kan også legge inn flere nøkkelord ved å bruke innstillingen \texttt{morekeywords} i \texttt{lstset}.
+\end{itemize}
+\end{frame}
+
 
 % Veien videre
 \section{Veien videre}
@@ -610,9 +679,6 @@ Ikke nøl med å ta kontakt på veronika.heimsbakk@acando.no!
 \end{tikzpicture}
 }
 
-\vspace{20pt}
-
-Perfekt for dere som tar INF2220 og INF2080.
 \end{frame}
 
 \end{document}
