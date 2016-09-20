@@ -1,0 +1,716 @@
+\documentclass[10pt]{beamer}
+\usepackage[norsk]{babel}
+\usepackage[utf8]{inputenc}
+
+% Beamertheme
+\usetheme{Szeged}
+\usefonttheme{professionalfonts}
+\usecolortheme{lily}
+
+% Pakker
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{soul}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{listings}
+
+% Tittel
+\title{Introduction to \LaTeX{}}
+\author{Veronika Heimsbakk\\veronika.heimsbakk@acando.no}
+\date{}
+
+
+\begin{document}
+
+% Tittelramme
+\begin{frame}\frametitle{}
+\maketitle
+\end{frame}
+
+% Om meg
+\begin{frame}\frametitle{About me}
+\begin{description}
+\item[Veronika Heimsbakk], developer at \includegraphics[width=1.4cm]{img/acandologo.png}
+\end{description}
+
+\begin{itemize}
+	\item
+	Done with my studies at Department of informatics by the spring of 2015.
+	\item
+	I love \LaTeX{}, Ti\textit{k}Z, colors and typography.
+	\item
+	Former employee at Sonen $\heartsuit$.
+	\item
+	Favorites at Uni: INF2080 and INF2220.
+\end{itemize}
+\end{frame}
+
+% Hva er LaTeX?
+\section{What is \LaTeX{}?}
+\subsection{}
+\begin{frame}\frametitle{}
+
+\begin{center}
+\includegraphics[width=5cm]{img/latexlogo.png}
+\end{center}
+
+\begin{itemize}
+	\item
+	A document markup language.
+	\item
+	Released in 1984.
+	\item
+	\LaTeX{} is short for \textbf{Lamport} \textbf{\TeX}.
+\end{itemize}
+\end{frame}
+
+% Lamport
+\begin{frame}\frametitle{Leslie Lamport}
+
+\begin{center}
+\includegraphics[height=3cm]{img/lamport.jpg}
+\end{center}
+
+\begin{itemize}
+	\item
+	Recieved the ACM Turing Award in 2013 for his work with distributed systems.
+\end{itemize}
+\end{frame}
+
+% TeX
+\begin{frame}\frametitle{\TeX}
+
+\begin{center}
+\includegraphics[width=3cm]{img/texlogo.png}
+\end{center}
+
+\begin{itemize}
+	\item
+	Released in 1978 by Donald Knuth.
+	\item
+	Typesetting system.
+	\item
+	Developed such that anyone could write high quality books at whatever computer.
+	\item
+	\url{https://www.tug.org/texlive/devsrc/Build/source/texk/web2c/tex.web}
+\end{itemize}
+\end{frame}
+
+% Knuth
+\begin{frame}\frametitle{Donald Knuth}
+
+\begin{center}
+\includegraphics[height=3cm]{img/knuth.jpg}
+\end{center}
+
+\begin{itemize}
+	\item
+	The Art of Computer Programming
+	\item
+	«father of the analysis of algorithms»
+\end{itemize}
+\end{frame}
+
+% Hvordan bruke LaTeX?
+\section{How to use \LaTeX{}?}
+\subsection{}
+\begin{frame}\frametitle{Installation}
+
+\begin{center}
+\includegraphics[width=1cm]{img/texworkslogo.png}
+\end{center}
+
+\begin{itemize}
+	\item
+	TeXworks, Kile, Vim, Emacs etc.
+	\item
+	\LaTeX{} is installed on every computer in this building.
+	\item
+	\texttt{apt-get install texlive}
+\end{itemize}
+\end{frame}
+
+% Syntax
+\section{Syntax}
+\subsection{}
+\begin{frame}[fragile]\frametitle{My first document}
+
+\begin{verbatim}
+\documentclass[a4paper, 10pt]{article}
+
+\begin{document}
+  My first document!
+\end{document}
+\end{verbatim}
+
+\begin{itemize}
+	\item There is several options for \texttt{documentclass}.
+\end{itemize}
+
+\begin{verbatim}
+\documentclass[options]{class}
+\end{verbatim}
+
+\begin{itemize}
+	\item \textbf{Options}: font size, paper size, twoside/oneside, landscape etc.
+	\item \textbf{Class}: \texttt{book}, \texttt{article}, \texttt{report}, \texttt{minimal}, \texttt{beamer} etc.
+\end{itemize}
+\end{frame}
+
+% Pakker
+\begin{frame}[fragile]\frametitle{Packages}
+
+\begin{itemize}
+	\item For language and typefaces.
+\end{itemize}
+
+\begin{verbatim}
+\usepackage[norsk]{babel} 
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\end{verbatim}
+
+\begin{itemize}
+	\item There is \textit{a lot} of packages with various snacks! More about this later on.
+\end{itemize}
+
+\begin{verbatim}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{listings}
+\usepackage{graphicx}
+\end{verbatim}
+\end{frame}
+
+% Forfatter og tittel
+\begin{frame}[fragile]\frametitle{Author and title}
+
+\begin{verbatim}
+\title{Introduction to \LaTeX{}}
+\author{Veronika Heimsbakk\\veronika.heimsbakk@acando.no}
+
+\begin{document}
+  \maketitle
+\end{document}
+\end{verbatim}
+
+\end{frame}
+
+% Seksjoner
+\begin{frame}[fragile]\frametitle{Sections}
+
+\begin{verbatim}
+\section{Section}
+This is section 1!
+
+\subsection{Sub section}
+This is section 1's sub section.
+
+\subsubsection{Sub sub section}
+This is section 1's sub sub section.
+\end{verbatim}
+
+\end{frame}
+
+% Paragrafer
+\begin{frame}[fragile]\frametitle{Paragraphs}
+
+\begin{verbatim}
+\paragraph{Paragraph}
+This is a paragraph.
+
+\subparagraph{Sub paragraph}
+This is an sub paragraph.
+\end{verbatim}
+
+\end{frame}
+
+% Kommentarer og ny linje
+\begin{frame}[fragile]\frametitle{Comments and new line}
+
+\begin{verbatim}
+% Comment.
+
+\newline
+\\
+\end{verbatim}
+
+\end{frame}
+
+% Tekst
+\section{Text}
+\subsection{}
+\begin{frame}[fragile]\frametitle{Text}
+
+\begin{center}
+\begin{tabular}{cccc}
+\texttt{\textbackslash textbf}&\texttt{\textbackslash textit}&\texttt{\textbackslash texttt}&\texttt{\textbackslash underline}\\
+\\
+\textbf{Bold}&\textit{Italic}&\texttt{Typeface}&\underline{Underline}\\
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+	\item
+	Several ways to decorate the text.
+\end{itemize}
+
+\begin{verbatim}
+\textbf{Bold}
+\bfseries{Bold}
+
+\textit{Italic}
+\itshape{Italic}
+\end{verbatim}
+
+\end{frame}
+
+% Pakker
+\begin{frame}[fragile]\frametitle{Text, packages}
+
+\begin{itemize}
+	\item
+	Several packages for decorating text.
+	\item
+	\texttt{soul}, \texttt{color}, $\dots$
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{cc}
+\texttt{\textbackslash st}&\texttt{\textbackslash textcolor\{red\}\{Rød tekst\}}\\
+\\
+\st{Strikethrough}&\textcolor{red}{Red text}\\
+\\
+\texttt{\textbackslash caps}&\texttt{\textbackslash so}\\
+\caps{Small Capitals}&\so{airy letters}
+\end{tabular}
+\end{center}
+
+\end{frame}
+
+% Størrelser
+\begin{frame}[fragile]\frametitle{Text, sizes}
+
+\begin{tabular}{ll}
+\texttt{\textbackslash tiny} & {\tiny Example}\\
+\texttt{\textbackslash scriptsize}& {\scriptsize Example}\\
+\texttt{\textbackslash footnotesize}& {\footnotesize Example}\\
+\texttt{\textbackslash small}& {\small Example}\\
+\texttt{\textbackslash normalsize}& {\normalsize Example}\\
+\texttt{\textbackslash large}& {\large Example}\\
+\texttt{\textbackslash Large}& {\Large Example}\\
+\texttt{\textbackslash LARGE}& {\LARGE Example}\\
+\texttt{\textbackslash huge}& {\huge Example}\\
+\texttt{\textbackslash Huge}& {\Huge Example}
+\end{tabular}
+
+\end{frame}
+
+% Skrifttyper
+\begin{frame}[fragile]\frametitle{Text, typefaces}
+
+\begin{tabular}{ll}
+\texttt{\textbackslash normalfont} & {\normalfont Example}\\
+\texttt{\textbackslash rmfamily}& {\rmfamily Example}\\
+\texttt{\textbackslash sffamily}& {\sffamily Example}\\
+\texttt{\textbackslash ttfamily}& {\ttfamily Example}\\
+\end{tabular}
+
+\begin{itemize}
+	\item
+	There are \textbf{many} typefaces for \LaTeX{}. Take a look at \url{http://www.tug.dk/FontCatalogue/}
+\end{itemize}
+
+\end{frame}
+
+% Verktøy
+\section{Tools}
+\subsection{}
+
+% Tabeller
+\begin{frame}[fragile]\frametitle{Tables}
+
+\begin{verbatim}
+\begin{tabular}[h!]{|l|r|c|}
+  \textbf{Table}&\textbf{Table}&\textbf{Table}\\
+  \hline
+  one&two&three\\
+  four&five&six\\
+  seven&eight&nine
+\end{tabular}
+\end{verbatim}
+
+\end{frame}
+
+% Figurer
+\begin{frame}[fragile]\frametitle{Figures}
+
+\begin{verbatim}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{img/latexlogo.png}
+  \caption{\LaTeX logo.}
+\end{figure}
+\end{verbatim}
+
+\end{frame}
+
+% Itemize
+\begin{frame}[fragile]\frametitle{Lists, itemize}
+
+\begin{itemize}
+	\item
+	This is an element.
+	\item
+	This is another element.
+\end{itemize}
+
+\begin{verbatim}
+\begin{itemize}
+  \item
+    This is an element.
+  \item
+    This is another element.
+\end{itemize}
+\end{verbatim}
+
+\end{frame}
+
+% Enumerate
+\begin{frame}[fragile]\frametitle{Lists, enumerate}
+
+\begin{enumerate}
+	\item
+	This is an element.
+	\begin{enumerate}
+		\item
+		This is another element.
+	\end{enumerate}
+\end{enumerate}
+
+\begin{verbatim}
+\begin{enumerate}
+  \item
+    This is an element.
+  \begin{enumerate}
+    \item
+      This is another element.
+  \end{enumerate}
+\end{enumerate}
+\end{verbatim}
+
+\end{frame}
+
+% Description
+\begin{frame}[fragile]\frametitle{Lists, description}
+
+\begin{description}
+	\item[*] This is an element.
+	\item[Element] This is another element.
+\end{description}
+
+\begin{verbatim}
+\begin{description}
+  \item[*] This is an element.
+  \item[Element] This is another element.
+\end{description}
+\end{verbatim}
+
+\end{frame}
+
+% Emph, fotnoter, verbatim
+\begin{frame}[fragile]\frametitle{Emph, footnotes and verbatim}
+
+\begin{itemize}
+	\item
+	In \texttt{verbatim} \textit{everything} is allowed (except from \texttt{verbatim}).
+\end{itemize}
+
+\begin{verbatim}
+This is verbatim.
+\end{verbatim}
+
+\emph{This is emph.}
+
+Example of footnote.\footnote{This is footnote.}
+
+\begin{verbatim}
+\emph{ ... }
+\footnote{ ... }
+\end{verbatim}
+
+\end{frame}
+
+% URLer
+\begin{frame}[fragile]\frametitle{URLs}
+
+\begin{itemize}
+	\item
+	Include the package \texttt{hyperref}.
+\end{itemize}
+
+\begin{description}
+	\item[]
+	\url{http://tug.org/}
+	\item[]
+	\href{http://tug.org/}{\TeX{} Users Group web site}
+	\item[]
+	\href{mailto:veronahe@ifi.uio.no}{veronahe@ifi.uio.no}
+\end{description}
+
+\begin{verbatim}
+\url{http://tug.org/}
+\href{http://tug.org/}{\TeX{} Users Group web site}
+\href{mailto:veronahe@ifi.uio.no}{veronahe@ifi.uio.no}
+\end{verbatim}
+
+\end{frame}
+
+% Matematikk
+\section{Mathematics}
+\subsection{}
+\begin{frame}[fragile]\frametitle{Environment, from \TeX{}}
+
+\begin{verbatim}
+$ ... $   % Online formula
+$$ ... $$ % Exposed formula
+\end{verbatim}
+
+Online formula $\forall x \in X, \quad \exists y \leq \epsilon$
+
+Exposed formula $$\forall x \in X, \quad \exists y \leq \epsilon$$ 
+
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Environment, new in \LaTeX{}}
+
+\begin{verbatim}
+\( ... \)  % Online formula
+\[ ... \]  % Exposed formula
+\end{verbatim}
+
+Online formula \(\forall x \in X, \quad \exists y \leq \epsilon\)
+
+Exposed formula \[\forall x \in X, \quad \exists y \leq \epsilon\]
+
+\begin{itemize}
+	\item
+	Alternative ways of writing equations
+	\begin{itemize}
+		\item
+		\texttt{\textbackslash begin\{equation\}}
+		\item
+		\texttt{\textbackslash begin\{align\}}
+	\end{itemize}
+\end{itemize}
+
+\begin{align}
+\forall x \in X, \quad \exists y \leq \epsilon
+\end{align}
+
+\begin{itemize}
+	\item
+	\texttt{align} gives enumerated equations.
+\end{itemize}
+\end{frame}
+
+% Symboler
+\begin{frame}[fragile]\frametitle{Symbols}
+
+\begin{center}
+\begin{tabular}{ll}
+Symbol&Skript\\
+\hline
+$\cap$&\texttt{\textbackslash cap}\\
+$\cup$&\texttt{\textbackslash cup}\\
+$\subseteq$&\texttt{\textbackslash subseteq}\\
+$\equiv$&\texttt{\textbackslash equiv}\\
+$\in$&\texttt{\textbackslash in}\\
+$\notin$&\texttt{\textbackslash notin}\\
+$\land$&\texttt{\textbackslash land}\\
+$\lor$&\texttt{\textbackslash lor}\\
+$\models$&\texttt{\textbackslash models}\\
+$\emptyset$&\texttt{\textbackslash emptyset}\\
+$\Lambda$&\texttt{\textbackslash Lambda}\\
+$\lambda$&\texttt{\textbackslash lambda}\\
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+	\item
+	\href{http://texdoc.net/texmf-dist/doc/latex/comprehensive/symbols-a4.pdf}{The Comprehensive \LaTeX{} Symbol List}
+	\item
+	\href{https://en.wikibooks.org/wiki/LaTeX/Mathematics}{\LaTeX{} Wiki Mathematics}
+\end{itemize}
+
+\end{frame}
+
+% Sannhetstabeller
+\begin{frame}[fragile]\frametitle{Sannhetstabeller}
+
+\LaTeX{} is the \textbf{perfect} tool for you who take INF1080\footnote{Among other courses with textual assignments}!
+
+\begin{center}
+\begin{tabular}{cc|c}
+A&B&A $\land$ B\\
+\hline
+0&0&0\\
+0&1&0\\
+1&0&0\\
+1&1&1\\
+\end{tabular}
+\end{center}
+
+\end{frame}
+
+% Kode
+\section{Code}
+\subsection{}
+
+% Innstillinger for lstlistings
+\lstset{
+	language=Java,
+	keywordstyle=\color{blue},
+	stringstyle=\color{red},
+	numbers=left,
+	numberstyle=\tiny\color{lightgray},
+	tabsize=2
+}
+
+\begin{frame}[fragile]
+\frametitle{\texttt{lstlistings}}
+
+\begin{lstlisting}
+public class Code {
+  public static void main(String[] args) {
+    System.out.println("Hello, world!"); 
+  }
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Settings for \texttt{lstlistings}}
+\begin{verbatim}
+\lstset{
+  language=Java,
+  keywordstyle=\color{blue},
+  stringstyle=\color{red},
+  numbers=left,
+  numberstyle=\tiny\color{lightgray},
+  tabsize=2
+}
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Using \texttt{lstlistings}}
+\begin{verbatim}
+\begin{lstlisting}
+public class Code {
+  public static void main(String[] args) {
+    System.out.println("Hello, world!"); 
+  }
+}
+\end{lstlisting}
+\end{verbatim}
+\begin{itemize}
+\item
+May import a code file with \texttt{\textbackslash lstinputlisting\{source\_filename.py\}}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Languages supported by \texttt{lstlistings}}
+ABAP, ACSL, Ada, Algol, Ant, Assembler, Awk, bash, Basic, C\#, C++, C, Caml, Clean, Cobol, Comal, csh, Delphi, Eiffel, Elan, erlang, Euphoria, Fortran, GCL, Gnuplot, Haskell, HTML, IDL, inform, Java, JVMIS, ksh, Lisp, Logo, Lua, make, Mathemathica, Matlab, Mercury, MetaPost, Miranda, Mizar, ML, Modelica, Modula-2, MuPAD, NASTRAN, Oberon-2, Objective C, OCL, Octave, Oz, Pascal, Perl, PHP, PL/I, Plasm, POV, Prolog, Promela, Python, R, Reduce, Rexx, RSL, Ruby, S, SAS, Scilab, sh, SHELXL, Simula, SQL, tcl, \TeX, VBScript, Verilog, VHDL, VRML, XML, XSLT.
+
+\begin{itemize}
+\item
+You may add your own keywords to \texttt{morekeywords} in \texttt{lstset}.
+\end{itemize}
+\end{frame}
+
+
+% Veien videre
+\section{What's next?}
+\subsection{}
+
+% Mer informajson
+\begin{frame}[fragile]\frametitle{More information}
+\begin{itemize}
+\item
+\url{http://www.mn.uio.no/ifi/tjenester/it/hjelp/latex/}
+\item
+\url{https://en.wikibooks.org/wiki/LaTeX}
+\item
+\url{http://tug.org/}
+\end{itemize}
+
+\end{frame}
+
+% Takk for meg
+\begin{frame}[fragile]\frametitle{Cheers!}
+Do not hesitate to contact me on veronika.heimsbakk@acando.no!
+\vspace{20pt}
+
+{\Large \textbf{Next course}: Ti\textit{k}Z $\heartsuit$}
+
+\vspace{20pt}
+
+\def\firstcircle{(0,0) circle (1.5cm)}
+\def\secondcircle{(45:2cm) circle (1.5cm)}
+\def\thirdcircle{(0:2cm) circle (1.5cm)}
+
+\scalebox{0.15}{
+\begin{tikzpicture}
+\foreach \x in {1,...,8}{%
+	\pgfmathparse{(\x-1)*360/8}
+	\node[draw,circle,inner sep=0.25, fill=purple] (N-\x) at (\pgfmathresult:5.4) {};
+}
+\foreach \x in {1,...,8}{%
+	\foreach \y in {1,...,8}{%
+		\path (N-\x) edge[black,-] (N-\y);
+	}
+}
+\end{tikzpicture}
+}
+\scalebox{0.5}{
+\begin{tikzpicture}[every node/.style={circle, draw=black}]
+\node {1}
+	child { node {2} 
+		child { node {4} }
+		child { node {5} }
+	}
+	child { node {3} }
+;
+\end{tikzpicture}
+}
+\scalebox{0.3}{
+\begin{tikzpicture}
+\draw[red, ultra thick] (0,0) sin (1,2) cos (2,0) sin (3,-2) cos (4,0) sin (5,2) cos (6,0) sin (7,-2) cos (8,0);
+\end{tikzpicture}
+}
+\scalebox{0.8}{
+\begin{tikzpicture}
+	\draw(6,0) circle (1cm);
+	\draw[fill=yellow, fill opacity=0.5](6.5,0) circle (0.5);
+	\draw[fill=cyan, fill opacity=0.5] (6,0.5) circle (0.5);
+	\draw[fill=red, fill opacity=0.5](5.5,0) circle (0.5);
+	\draw[fill=green, fill opacity=0.3](6,-0.5) circle (0.5);
+\end{tikzpicture}
+} 
+\scalebox{0.4}{
+\begin{tikzpicture}
+        \begin{scope}[even odd rule]
+            \clip \secondcircle (-0,-0) rectangle (0,0);
+        \fill[teal] \firstcircle;
+        \end{scope}
+        \draw \firstcircle node {$A$};
+        \draw \secondcircle node {$B$};
+\end{tikzpicture}
+}
+
+\end{frame}
+
+\end{document}
