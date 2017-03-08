@@ -1,0 +1,163 @@
+\documentclass[12pt]{article}
+
+\usepackage[norsk]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{soul}
+\usepackage{color}
+
+% Bilder/figurer
+\usepackage{graphicx}
+
+% URL
+\usepackage{hyperref}
+
+
+
+
+
+\title{\LaTeX{} liveprog}
+\author{Veronika\\ veronahe@ifi.uio.no}
+
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+
+\section{Dette er en seksjon!}
+\subsection{Underseksjon}
+\subsubsection{Underunderseksjon}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu porttitor urna. Suspendisse tempus bibendum suscipit. 
+
+Nam ex odio\footnote{Dette er en fotnote.}, tempus et congue in, bibendum at nisl. Morbi ac sodales neque. Duis egestas dolor enim, in suscipit lorem dignissim vitae. 
+
+Dette er en referanse til figur \ref{fig:logo}.
+
+\paragraph{Dette er en paragraf}
+
+Aenean feugiat odio id purus dignissim, sit amet dictum orci condimentum. 
+\subparagraph{Subpar.}
+Cras facilisis nulla interdum, efficitur ipsum non, viverra tortor. Quisque pharetra consectetur orci id egestas.
+\subsection{Underseksjon 2}
+
+\newpage
+
+\% \# \$ \textbackslash
+
+
+\textbf{Lorem ipsum} dolor sit amet, consectetur adipiscing elit. Nunc eu porttitor urna. Suspendisse tempus bibendum suscipit. Nam ex odio, tempus et congue in, bibendum at nisl. Morbi ac sodales neque. Duis egestas dolor enim, in suscipit lorem dignissim vitae. 
+
+
+\textit{Aenean feugiat} odio id purus dignissim, sit amet dictum orci condimentum. 
+
+\texttt{Cras facilisis} nulla interdum, efficitur ipsum non, viverra tortor. 
+
+\textcolor{red}{Quisque pharetra} consectetur orci id egestas.
+
+\newpage
+
+
+\begin{tabular}{| l || l | l |}
+\hline
+En & To & Tre \\
+\hline
+\hline
+Fire & Fem & Seks \\
+\hline
+Sju & Åtte & Ni \\
+\hline
+\end{tabular}
+
+
+\begin{figure}[h!]
+\includegraphics[width=\textwidth]{latexlogo.png}
+
+\caption{En eller annen bildetekst.}
+
+\label{fig:logo}
+\end{figure}
+
+Dette er en referanse til figur \ref{fig:logo}.
+
+\listoffigures
+
+\url{http://example.org/}
+\href{http://example.org/}{Eks}
+
+
+\newpage
+
+
+\begin{itemize}
+\item Dette er et listeelement.
+\begin{itemize}
+\item Dette er et listeelement.
+\begin{itemize}
+\item Dette er et listeelement.
+\item Dette er et listeelement.
+\end{itemize}
+\item Dette er et listeelement.
+\end{itemize}
+\item Dette er et listeelement.
+\end{itemize}
+
+
+\begin{enumerate}
+\item Dette er et listeelement.
+\begin{enumerate}
+\item Dette er et listeelement.
+\begin{enumerate}
+\item Dette er et listeelement.
+\item Dette er et listeelement.
+\end{enumerate}
+\item Dette er et listeelement.
+\end{enumerate}
+\item Dette er et listeelement.
+\end{enumerate}
+
+
+\begin{description}
+\item[Element] Dette er et listeelement.
+\item[*] Dette er et listeelement.
+\item[Hei] Dette er et listeelement.
+\end{description}
+
+\newpage
+
+\begin{verbatim}
+Dette er en verbatim.
+  {
+}
+# % & \
+\end{verbatim}
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu porttitor urna. Suspendisse tempus bibendum suscipit. Nam ex odio, tempus et congue in, bibendum at nisl. Morbi ac sodales neque. Duis egestas dolor enim, in suscipit lorem dignissim vitae. Aenean feugiat odio id purus dignissim, sit amet dictum orci condimentum. 
+\begin{equation}
+x \in S \times 34
+\end{equation}
+Cras facilisis nulla interdum, efficitur ipsum non, viverra tortor. Quisque pharetra consectetur orci id egestas. $\forall \epsilon 1 + 1 \times 2$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
