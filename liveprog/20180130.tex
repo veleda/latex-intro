@@ -1,0 +1,217 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{soul}
+
+\usepackage{color}
+
+
+\usepackage{mathtools}
+
+
+\lstset{
+  language=Java,
+  keywordstyle=\color{blue},
+  stringstyle=\color{red},
+  numbers=left,
+  numberstyle=\tiny\color{green},
+  tabsize=2
+}
+
+
+\title{\LaTeX{}-prat for Sonen}
+\author{Veronika}
+
+\begin{document}
+
+\maketitle
+
+%\tableofcontents
+
+\section{Dette er en seksjon}
+\subsection{Dette er en underseksjon}
+\subsubsection{Dette er en underunderseksjon}
+
+\paragraph{Dette er en paragraf}
+\subparagraph{Dette er en underparagraf}
+
+\subsection{Dette er en underseksjon til}
+
+
+\section{Dette er en seksjon til}
+
+\newpage
+
+\% \$ \textbackslash Lorem ipsum dolor sit amet, consectetur adipiscing elit. \textbf{Vivamus} ultrices pharetra lorem et ultricies. Duis lobortis convallis purus sodales egestas. Aliquam in semper diam. In hac habitasse platea dictumst. Duis non lorem elementum, aliquam turpis eleifend, venenatis tortor. Mauris sed lobortis libero. \textit{Curabitur} vitae sollicitudin libero, eget mollis lorem. Phasellus egestas euismod risus sit amet consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ligula tellus, elementum ac pulvinar nec, aliquam a justo. \underline{Fusce} hendrerit tincidunt porttitor. Curabitur accumsan, felis ut posuere euismod, lorem sem pellentesque justo, sit amet hendrerit purus nisl ac neque. Ut nec malesuada ex, vitae rhoncus massa. Pellentesque vitae nunc porttitor, posuere nunc ornare, iaculis \st{nisl}.
+Se tabell \ref{tab:tabelleksempel}.
+Nam nec nunc at est placerat laoreet. Nam ornare consectetur maximus. Integer lacinia consectetur semper. Nunc ac laoreet lorem. Nunc egestas orci ut condimentum tempus. Etiam nec risus sed tellus euismod aliquet. Nulla interdum odio id interdum eleifend. Donec porta porta tincidunt. Sed sodales, purus ut faucibus ultricies, metus nibh convallis lacus, sed consectetur ex nunc in leo.
+
+Integer gravida, nunc nec gravida ultricies, sapien odio malesuada mi, a tempor ligula ex nec justo. Nulla facilisi. Aliquam feugiat nisl ac porttitor mattis. Nullam viverra est risus, dictum varius elit feugiat vel. Pellentesque sagittis eget tortor nec volutpat. Quisque ac lacinia arcu. Sed faucibus viverra erat vitae ornare. Suspendisse ac libero ac dolor suscipit cursus. Praesent sed elit at neque lobortis finibus vel eu lorem. Cras finibus lobortis risus et consectetur. Quisque ac nisl imperdiet, venenatis turpis eget, gravida purus. Integer ullamcorper, augue in gravida rutrum, leo dui congue eros, eu lacinia metus augue eget metus. Phasellus lacinia ante id sapien posuere, sed bibendum massa consectetur. Suspendisse laoreet dignissim finibus.
+
+\newpage
+
+Integer gravida, nunc nec gravida ultricies, sapien odio malesuada mi, a tempor ligula ex nec justo. Nulla facilisi. Aliquam feugiat nisl ac porttitor mattis. Nullam viverra est risus, dictum varius elit feugiat vel. Pellentesque sagittis eget tortor nec volutpat. Quisque ac lacinia arcu. Sed faucibus viverra erat vitae ornare. Suspendisse ac libero ac dolor suscipit cursus. Praesent sed elit at neque lobortis finibus vel eu lorem. Cras finibus lobortis risus et consectetur. Quisque ac nisl imperdiet, venenatis turpis eget, gravida purus. Integer ullamcorper, augue in gravida rutrum, leo dui congue eros, eu lacinia metus augue eget metus. Phasellus lacinia ante id sapien posuere, sed bibendum massa consectetur. Suspendisse laoreet dignissim finibus.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{| l | c | r |}
+\hline
+en&to&tre\\
+\hline
+fire&fem&seks\\
+\hline
+sju&åtte&ni\\
+\hline
+\end{tabular}
+\caption{Dette er en tabell.}
+\label{tab:tabelleksempel}
+\end{table}
+
+Integer gravida, nunc nec gravida ultricies, sapien odio malesuada mi, a tempor ligula ex nec justo. Nulla facilisi. Aliquam feugiat nisl ac porttitor mattis. Nullam viverra est risus, dictum varius elit feugiat vel. Pellentesque sagittis eget tortor nec volutpat. Quisque ac lacinia arcu. Sed faucibus viverra erat vitae ornare. Suspendisse ac libero ac dolor suscipit cursus. Praesent sed elit at neque lobortis finibus vel eu lorem. Cras finibus lobortis risus et consectetur. Quisque ac nisl imperdiet, venenatis turpis eget, gravida purus. Integer ullamcorper, augue in gravida rutrum, leo dui congue eros, eu lacinia metus augue eget metus. Phasellus lacinia ante id sapien posuere, sed bibendum massa consectetur. Suspendisse laoreet dignissim finibus.
+
+\newpage
+
+\url{http://tug.org}
+\href{http://tug.org}{\TeX{} User Group}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{latexlogo.png}
+\caption{\LaTeX{}-logo!}
+\label{fig:latexlogo}
+\end{figure}
+
+
+\begin{itemize}
+\item
+Punkt 1
+\begin{itemize}
+\item
+Punkt 1
+\begin{itemize}
+\item
+Punkt 1
+\begin{itemize}
+\item
+Punkt 1
+\item
+Punkt 2
+\end{itemize}
+\item
+Punkt 2
+\end{itemize}
+\item
+Punkt 2
+\end{itemize}
+\item
+Punkt 2
+\end{itemize}
+
+
+\begin{enumerate}
+\item
+Punkt 1
+\begin{enumerate}
+\item
+Punkt 1
+\begin{enumerate}
+\item
+Punkt 1
+\item
+Punkt 2
+\end{enumerate}
+\item
+Punkt 2
+\end{enumerate}
+\item
+Punkt 2
+\end{enumerate}
+
+\begin{description}
+\item[Element] Punkt 1
+\begin{description}
+\item[Element] Punkt 1
+\begin{description}
+\item[Element] Punkt 1
+\end{description}
+\end{description}
+\end{description}
+
+
+\newpage
+
+
+Integer gravida, nunc nec gravida ultricies, sapien odio malesuada mi, a tempor ligula ex nec justo. Nulla facilisi. Aliquam feugiat nisl ac porttitor mattis. Nullam viverra est risus, dictum varius elit feugiat vel. Pellentesque sagittis eget tortor nec volutpat. \emph{Quisque ac lacinia arcu.} Sed faucibus viverra erat vitae ornare. Suspendisse ac libero ac dolor suscipit cursus. Praesent sed elit at neque lobortis finibus vel eu lorem. Cras finibus lobortis risus et consectetur. Quisque ac nisl imperdiet\footnote{Dette er en fotnote.}, venenatis turpis eget, gravida purus. Integer ullamcorper, augue in gravida rutrum, leo dui congue eros, eu lacinia metus augue eget metus. Phasellus lacinia ante id sapien posuere, sed bibendum massa consectetur. Suspendisse laoreet dignissim finibus.
+
+\begin{verbatim}
+% hei verbatim
+\end{verbatim}
+
+\section{Matematikk}
+
+augue eget metus. Phasellus lacinia ante id sapien posuere, sed bibendum massa $2 \times 3 = c \in F$ consectetur. Suspendisse laoreet dignissim finibus.
+
+$$2 \times 3 = c \in F$$
+
+e in gravida rutrum, leo dui congue eros, eu lacinia metus augue eget metus. \ref{eq:ligning} Phasellus lacinia ante id sapien posuere, sed bibendum massa 
+\ref{eq:l}
+consectetur. Suspendisse laoreet dignissim finibus.
+
+\begin{align}
+2 \times 3 = c \in F
+\label{eq:l}
+\end{align}
+
+\begin{align}
+2 \times 3 = c \in F
+\label{eq:ligning}
+\end{align}
+
+
+
+
+\newpage
+
+\section{Kode!}
+
+\begin{lstlisting}
+
+public static void main(String[] args) {
+	System.out.println("Heisann");
+}
+
+\end{lstlisting}
+
+
+
+
+
+
+
+
+\newpage
+lol
+\vspace{150pt}
+
+\Huge{nettskjema.uio.no/answer/arrsonen.html}
+
+\Huge{github.com/veleda}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
