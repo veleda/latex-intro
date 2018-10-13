@@ -14,6 +14,7 @@
 \usepackage{amsmath}
 \usepackage{tikz}
 \usepackage{listings}
+\usepackage{fancyvrb}
 
 % Tittel
 \title{Introduksjon til \LaTeX{}}
@@ -41,8 +42,6 @@
 	Forkjærlighet for \LaTeX{}, Ti\textit{k}Z, farger og fonter.
 	\item
 	Tidligere ansatt i Sonen $\heartsuit$.
-	\item
-	Favorittfag: INF2080 og INF2220.
 \end{itemize}
 \end{frame}
 
@@ -83,6 +82,8 @@
 
 \begin{center}
 \includegraphics[width=3cm]{img/texlogo.png}
+
+$\tau \epsilon \chi \nu \eta$---TEXNH---\textit{technē}
 \end{center}
 
 \begin{itemize}
@@ -464,6 +465,48 @@ Eksempeltekst med fotnote.\footnote{Dette er en fotnote.}
 \href{http://tug.org/}{\TeX{} Users Group web site}
 \href{mailto:veronahe@ifi.uio.no}{veronahe@ifi.uio.no}
 \end{verbatim}
+
+\end{frame}
+
+% Referanser
+\begin{frame}[fragile]{Referanser}
+Kan legge kommandoen \texttt{label} på følgende miljøer.
+\begin{itemize}
+\item
+\texttt{section}
+\item
+\texttt{figure}
+\item
+\texttt{tabular}
+\item
+\texttt{equation}
+\item
+$\cdots$
+\end{itemize}
+Refererer ved å bruke kommandoen \texttt{ref}.
+\end{frame}
+
+\begin{frame}[fragile]{Referanser, eksempel}
+
+\begin{Verbatim}
+\begin{equation}
+  \label{eq:costfunction}
+  J(\theta_0 \theta_1) = ....
+\end{equation}
+\end{Verbatim}
+
+\begin{equation}
+  \label{eq:costfunction}
+  J(\theta_0 \theta_1) = \frac{1}{2m}\displaystyle\sum_{i=1}^{m} (h_\theta(x^{(i)})-y^{(i)})^2
+\end{equation}
+
+Nå kan vi snakke om ligning \ref{eq:costfunction} i teksten vår opptil flere ganger, uavhengig av hvor mange andre ligninger som måte komme til.
+
+\begin{Verbatim}[fontsize=\small]
+Nå kan vi snakke om ligning \ref{eq:costfunction} i teksten ...
+\end{Verbatim}
+
+
 
 \end{frame}
 
